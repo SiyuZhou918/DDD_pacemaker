@@ -1,3 +1,5 @@
+import datetime
+
 def DDD_pacemaker():
     init_time = 0
     pstate = LRLONLY
@@ -29,7 +31,18 @@ def DDD_pacemaker():
         elif pstate == VRP:
             process_APACE()
             break
+        else:
+            print("Illegal state\n")
+            break
+        time += 1
 
+def process_LRLONLY():
+    expired_time = 1  # 1 second
+    if check_LRL_timer == LRL_expired_time:
+        reset_LRL_timer()
+        pstate = APACE
+        print("APACE")
+    print("LRLONLY")
 
 if __name__ == '__main__':
     DDD_pacemaker()
