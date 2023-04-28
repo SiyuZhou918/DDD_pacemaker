@@ -44,5 +44,6 @@ def process_LRLONLY():
         print("APACE")
     print("LRLONLY")
 
+
 if __name__ == '__main__':
     DDD_pacemaker()
